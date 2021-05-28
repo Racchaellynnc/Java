@@ -1,46 +1,66 @@
+public class Dog extends Pet  {
 
-public class dogInfo {                         
-		   public String name;
-		   private int weight;
-		   private Boolean grooming;
-		   private int spaceNumber;
-		   
-		   public String getName() {  // Accessor
-			  return name;
-		   }
+    private int dogSpaceNbr;
+    private double dogWeight;
+    private String grooming;
+    private String petType;
 
-		   public void setName(String dogName) {  // Mutator
-		      name = dogName;
-		   }
-		   
-		   public void getDogSpaceNumber() {  // Accessor
-			  spaceNumber = 0;
-		   }
+    // Constructor:
+    
+    public Dog(String petName, int petAge, int dayStay, double amountDue) {
 
-		   public void setDogSpaceNumber(int dogSpaceNumber) {  // Mutator
-			  spaceNumber = dogSpaceNumber;
-		   }
+        super(petName, petAge, dayStay, amountDue);
 
-		   public int getWeight() {  // Accessor
-		      return 0;
-		   }
+    }
+    
+    
+    // Constructor:
+    
+    public Dog(int dogSpaceNbr, double dogWeight, String grooming, String petName, int petAge, int dayStay, double amountDue) {
 
-		   public void setWeight(int dogWeight) {       // Mutator
-			  weight = dogWeight;
-		   }
-		   
-		   public void getGrooming() {  // Accessor
-			  grooming = false;
-		   }
+        super(petName, petAge, dayStay, amountDue);
 
-		   public void setGrooming(Boolean dogGrooming) {       // Mutator
-			  grooming = dogGrooming;
-		   }
-		   public void print() {
-			      System.out.println("Full name: " + name);
-			      System.out.println("Space number: " + spaceNumber);
-			      System.out.println("Weight: " + weight);
-			      System.out.println("Grooming: " + grooming);
-			   }
+        this.dogSpaceNbr = dogSpaceNbr;
+        this.dogWeight = dogWeight;
+        this.grooming = grooming;
+
+    }
+    
+      
+
+    
+
+    @Override
+    public String toString() {
+        super.toString();
+        return "Dog{" + "dogSpaceNbr=" + dogSpaceNbr + ", dogWeight=" + dogWeight + ", grooming=" + grooming + ", petType=" + petType + '}';
+    }
+    
+    
+    // Setters and getters:
+    
+    public int getDogSpaceNbr() {
+        return dogSpaceNbr;
+    }
+
+    public void setDogSpaceNbr(int dogSpaceNbr) {
+        this.dogSpaceNbr = dogSpaceNbr;
+    }
+
+    public double getDogWeight() {
+        return dogWeight;
+    }
+
+    public void setDogWeight(double dogWeight) {
+        this.dogWeight = dogWeight;
+    }
+
+    public String getGrooming() {
+        return grooming;
+    }
+
+    public void setGrooming(String grooming) {
+        this.grooming = grooming;
+    }
 
 }
